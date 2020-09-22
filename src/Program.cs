@@ -1,6 +1,6 @@
 ﻿// KeyLightSwitch by Jamie Laundon
 // Simple Elgato Key Light Air Light Switch App
-//
+// https://github.com/jamielaundon/KeyLightSwitch
 // Elgato Key Light Airs are great, but hard to control if you have multiple VLANs that don't support mDNS
 //
 // Controls Elgato Key Light Air API at http://ip.of.light:9123/elgato/lights 
@@ -21,6 +21,8 @@ namespace KeyLightSwitch
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("KeyLightSwitch");
+
         }
     }
 }
