@@ -53,8 +53,8 @@ namespace KeyLightSwitch
 
         static async Task RunAsync()
         {
-            // TODO read from settings
-            client.BaseAddress = new Uri("http://IP-ADDRESS-HERE:9123/");
+                       
+            client.BaseAddress = new Uri(Properties.Settings.Default["ip"].ToString());
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -76,12 +76,12 @@ namespace KeyLightSwitch
                 else
                 {
                     // Create a new light
-                    // TODO read from settings
+                  
                     Console.WriteLine("Turning on...");
                     Light light = new Light
                     {
-                        brightness = 20,
-                        temperature = 250,
+                        brightness = Convert.ToInt32(Properties.Settings.Default["brightness"]),
+                        temperature = Convert.ToInt32(Properties.Settings.Default["temperature"]),
                         on = 1
                     };
 
